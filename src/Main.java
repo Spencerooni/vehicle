@@ -2,12 +2,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Vehicle myVehicle = new Vehicle("Mazda", "mx5", "1.8 petrol");
+        Engine engine = new Engine("ford", "petrol");
 
-        System.out.println(myVehicle.getEngine());
+        Engine ferrariEngine = new Engine("ferrari", "petrol");
 
-        myVehicle.changeEngine("2.0 petrol");
+        Vehicle myVehicle = new Vehicle("Mazda", "mx5", engine);
 
-        System.out.println(myVehicle.getEngine());
+        System.out.println(myVehicle.getEngine().getDescription());
+
+        myVehicle.changeEngine(ferrariEngine);
+
+        System.out.println(myVehicle.getEngine().getDescription());
     }
 }

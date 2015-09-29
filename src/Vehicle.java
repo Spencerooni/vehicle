@@ -4,7 +4,7 @@ public class Vehicle {
 
     private String brand;
     private String model;
-    private String engine;
+    private Engine engine;
     private int numberOfWheels;
     private int numberOfSeats;
     private Date lastTimeEngineChanged;
@@ -17,13 +17,13 @@ public class Vehicle {
         setAppropriateNumberOfWheels();
     }
 
-    public Vehicle(String brand, String model, String engine)
+    public Vehicle(String brand, String model, Engine engine)
     {
         this(brand, model);
         this.engine = engine;
     }
 
-    public Vehicle(String brand, String model, String engine, int numberOfSeats)
+    public Vehicle(String brand, String model, Engine engine, int numberOfSeats)
     {
         this(brand, model, engine);
         this.numberOfSeats = numberOfSeats;
@@ -41,7 +41,7 @@ public class Vehicle {
         }
     }
 
-    public String getEngine()
+    public Engine getEngine()
     {
         return this.engine;
     }
@@ -51,7 +51,7 @@ public class Vehicle {
         return this.brand + " " + this.model;
     }
 
-    public void changeEngine(String engine)
+    public void changeEngine(Engine engine)
     {
         this.engine = engine;
         this.lastTimeEngineChanged = new Date();
